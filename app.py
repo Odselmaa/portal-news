@@ -60,6 +60,7 @@ def specific_news(news_id):
         return jsonify({'response':news, 'statusCode': 200})
     elif request.method == 'PUT':
         news_json = request.json['payload']
+        print(news_json)
         affected_row = update_news(news_id, news_json)
         if affected_row > 0:
             return jsonify({'response': 'OK', 'statusCode': 200}), 200
