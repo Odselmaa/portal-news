@@ -67,8 +67,8 @@ def specific_news(news_id):
             return jsonify({'response': 'NOT OK', 'statusCode': 404}), 404
 
     elif request.method == 'DELETE':
-        delete_news(news_id)
-        return jsonify({'response': 'OK'}), 200
+        print(delete_news(news_id))
+        return jsonify({'response': 'OK', 'statusCode':200}), 200
 
 
 @app.errorhandler(BadRequest)

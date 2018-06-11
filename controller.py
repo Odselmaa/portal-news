@@ -30,6 +30,7 @@ def update_news(news_id, news_json):
     news = News.objects(id=news_id)
     return news.update(**news_json)
 
+
 def delete_news(news_id):
     news = News(id=news_id)
     return news.delete()
